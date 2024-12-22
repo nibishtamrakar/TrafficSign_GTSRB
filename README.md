@@ -5,10 +5,10 @@ Traffic Sign Recognition project using Kaggle's GTSRB dataset and a Convolutiona
 This project utilizes the German Traffic Sign Recognition Benchmark (GTSRB) dataset, sourced from Kaggle. The GTSRB dataset contains traffic sign images categorized into 43 classes, representing various types of road signs.
 
 Dataset Details:
-Source: [GTSRB on Kaggle](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign)
-Number of Classes: 43
-Image Format: RGB
-Resolution: Varies (preprocessing includes resizing to a uniform size)
-Training Samples: Over 39,000 images
-Validation Samples: Custom split during preprocessing (e.g., 80/20 split)
-The dataset was preprocessed to normalize image pixel values and resize images for input compatibility with the Convolutional Neural Network (CNN). Data augmentation techniques were also applied to enhance model generalization, including rotation, flipping, and scaling.
+Source: [GTSRB on Kaggle](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign) <br>
+Number of Classes: 43<br>
+Image Format: RGB<br>
+Resolution: Varies (preprocessing includes resizing to a uniform size)<br>
+Training Samples: Over 39,000 images<br>
+Validation Samples: Custom split during preprocessing (e.g., 80/20 split)<br>
+The dataset was preprocessed to normalize image pixel values and resize images for input compatibility with the Convolutional Neural Network (CNN). Data augmentation techniques were also applied to enhance model generalization, including rotation, flipping, and scaling.<br>
