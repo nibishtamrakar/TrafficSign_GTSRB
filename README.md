@@ -1,6 +1,6 @@
 # TrafficSign_GTSRB
 Traffic Sign Recognition project using Kaggle's GTSRB dataset and a Convolutional Neural Network (CNN) implemented with TensorFlow. This repository includes data preprocessing, model architecture, training, evaluation, and visualization of results.
-
+---
 # Training Set
 This project utilizes the German Traffic Sign Recognition Benchmark (GTSRB) dataset, sourced from Kaggle. The GTSRB dataset contains traffic sign images categorized into 43 classes, representing various types of road signs.
 
@@ -13,10 +13,10 @@ Training Samples: Over 39,000 images<br>
 Validation Samples: Custom split during preprocessing (e.g., 80/20 split)
 
 The dataset was preprocessed to normalize image pixel values and resize images for input compatibility with the Convolutional Neural Network (CNN). Data augmentation techniques were also applied to enhance model generalization, including rotation, flipping, and scaling.
+---
+# LeNet Convolution Architecture
 
-### LeNet Convolution Architecture
-
-The Convolutional Neural Network (CNN) used in this project is based on a modified LeNet architecture. The network is designed for efficient traffic sign recognition, leveraging convolutional and pooling layers followed by fully connected layers for classification. 
+This project's first Convolutional Neural Network (CNN) is based on a modified LeNet architecture. The network is designed for efficient traffic sign recognition, leveraging convolutional and pooling layers followed by fully connected layers for classification. 
 
 #### Model Summary:
 | Layer (Type)                  | Output Shape       | Parameters   |
@@ -45,3 +45,42 @@ The Convolutional Neural Network (CNN) used in this project is based on a modifi
 5. **Fully Connected Layers**: Perform the final classification into 43 traffic sign classes.
 
 This architecture is lightweight and well-suited for recognizing traffic signs in the GTSRB dataset.
+---
+# Convolutional Neural Network Architecture
+
+This project employs another Convolutional Neural Network (CNN) designed specifically for the classification of traffic signs in the GTSRB dataset. The architecture is structured to balance complexity and efficiency, ensuring robust feature extraction and classification.
+
+#### Model Summary:
+| Layer (Type)                  | Output Shape       | Parameters   |
+|-------------------------------|--------------------|--------------|
+| `conv2d_4` (Conv2D)           | (None, 28, 28, 32)| 832          |
+| `conv2d_5` (Conv2D)           | (None, 24, 24, 32)| 25,632       |
+| `max_pooling2d_2` (MaxPooling2D)| (None, 12, 12, 32)| 0            |
+| `dropout_2` (Dropout)         | (None, 12, 12, 32)| 0            |
+| `conv2d_6` (Conv2D)           | (None, 10, 10, 64)| 18,496       |
+| `max_pooling2d_3` (MaxPooling2D)| (None, 5, 5, 64) | 0            |
+| `dropout_3` (Dropout)         | (None, 5, 5, 64)  | 0            |
+| `flatten_1` (Flatten)         | (None, 1600)      | 0            |
+| `dense_2` (Dense)             | (None, 256)       | 409,856      |
+| `dropout_4` (Dropout)         | (None, 256)       | 0            |
+| `dense_3` (Dense)             | (None, 43)        | 11,051       |
+
+#### Total Parameters:
+- **Trainable Parameters**: 465,867 (1.78 MB)
+- **Non-trainable Parameters**: 0
+
+#### Key Features:
+1. **Convolutional Layers**:
+   - The network begins with two Conv2D layers (32 filters), followed by MaxPooling and Dropout layers to extract low-level spatial features.
+   - Deeper Conv2D layers (64 filters) further refine the features.
+
+2. **Pooling and Dropout**:
+   - MaxPooling layers reduce spatial dimensions to lower computational cost.
+   - Dropout layers are applied to regularize the model and prevent overfitting.
+
+3. **Fully Connected Layers**:
+   - After flattening, a dense layer with 256 units learns high-level representations.
+   - The final dense layer has 43 units corresponding to the number of traffic sign classes.
+
+This architecture is well-suited for traffic sign recognition, balancing performance and computational efficiency.
+---
