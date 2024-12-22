@@ -5,7 +5,7 @@ Traffic Sign Recognition project using Kaggle's GTSRB dataset and a Convolutiona
 This project utilizes the German Traffic Sign Recognition Benchmark (GTSRB) dataset, sourced from Kaggle. The GTSRB dataset contains traffic sign images categorized into 43 classes, representing various types of road signs.
 
 Dataset Details:
-Source: [GTSRB on Kaggle] (https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign)
+Source: [GTSRB on Kaggle](https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign)
 Number of Classes: 43
 Image Format: RGB
 Resolution: Varies (preprocessing includes resizing to a uniform size)
