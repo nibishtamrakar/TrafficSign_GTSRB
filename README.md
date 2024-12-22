@@ -1,6 +1,6 @@
 # TrafficSign_GTSRB
 Traffic Sign Recognition project using Kaggle's GTSRB dataset and a Convolutional Neural Network (CNN) implemented with TensorFlow. This repository includes data preprocessing, model architecture, training, evaluation, and visualization of results.
----
+
 # Training Set
 This project utilizes the German Traffic Sign Recognition Benchmark (GTSRB) dataset, sourced from Kaggle. The GTSRB dataset contains traffic sign images categorized into 43 classes, representing various types of road signs.
 
@@ -13,7 +13,10 @@ Training Samples: Over 39,000 images<br>
 Validation Samples: Custom split during preprocessing (e.g., 80/20 split)
 
 The dataset was preprocessed to normalize image pixel values and resize images for input compatibility with the Convolutional Neural Network (CNN). Data augmentation techniques were also applied to enhance model generalization, including rotation, flipping, and scaling.
----
+
+#### Distribution of the Data
+![Bar Graph](/images/dist.png)
+
 # LeNet Convolution Architecture
 
 This project's first Convolutional Neural Network (CNN) is based on a modified LeNet architecture. The network is designed for efficient traffic sign recognition, leveraging convolutional and pooling layers followed by fully connected layers for classification. 
@@ -45,7 +48,7 @@ This project's first Convolutional Neural Network (CNN) is based on a modified L
 5. **Fully Connected Layers**: Perform the final classification into 43 traffic sign classes.
 
 This architecture is lightweight and well-suited for recognizing traffic signs in the GTSRB dataset.
----
+
 # Convolutional Neural Network Architecture
 
 This project employs another Convolutional Neural Network (CNN) designed specifically for the classification of traffic signs in the GTSRB dataset. The architecture is structured to balance complexity and efficiency, ensuring robust feature extraction and classification.
@@ -83,4 +86,4 @@ This project employs another Convolutional Neural Network (CNN) designed specifi
    - The final dense layer has 43 units corresponding to the number of traffic sign classes.
 
 This architecture is well-suited for traffic sign recognition, balancing performance and computational efficiency.
----
+
