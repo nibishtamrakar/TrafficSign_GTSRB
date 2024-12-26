@@ -87,8 +87,8 @@ This project employs another Convolutional Neural Network (CNN) designed specifi
 
 This architecture is well-suited for traffic sign recognition, balancing performance and computational efficiency.
 
-# Final Error and Confusion Matrix
-![ERROR](/images/TestDataFinal.png)
+# Final Test and Confusion Matrix
+![TEST](/images/TestDataFinal.png)
 
 ![CM](/images/ConfusionMatrix.png)
 # Testing on video feed
